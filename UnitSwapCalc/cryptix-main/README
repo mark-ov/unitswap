@@ -1,0 +1,33 @@
+NOTE: CRYPTIX IS ARCHIVED!
+
+cryptix - unit converter for android
+====================================
+cryptix is a simple, functional, and efficient unit convertion software for android. it doesn't 
+require any permissions and it doesn't need more than 2MBs of space(varies with device).
+
+build
+-----
+
+    build from android studio
+    -------------------------
+    - clone this repository(git clone https://gitlab.com/biotstoiq/cryptix.git).
+    - open the project in Android Studio.
+    - select build variant(Build->Select Build Variant->release).
+    - choose "Build Bundle(s) / APK(s)" and build.
+
+    build from commandline
+    ----------------------
+    - first, please go through the build.gradle file to see the dependencies.
+    - make sure you have the commandline tools(https://developer.android.com/studio#cmdline-tools).
+    - make sure you have the SDK installed.
+    - clone this directory(git clone https://gitlab.com/biotstoiq/cryptix.git) and cd into it.
+    - edit the local.properties file(if not present, create one) and give SDK 
+      location in the file(sdk.dir=/path/to/SDK).
+    - exectute "./gradlew assembleRelease".
+    - execute "adb install ./app/build/outputs/apk/release/*.apk"
+
+contribution
+------------
+
+there are a lot of ways in which you can contribute. you can help spread the word; you can 
+also contribute code/ideas/artwork/etc. any sort of help is appreciated.

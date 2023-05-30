@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/typeInputSearchText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:hint="@string/typeInputSearch"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:outlineProvider="none"
+        android:textColorHint="#DD2C00"
+        app:layout_constraintBottom_toTopOf="@+id/typeInputList"
+        app:layout_constraintEnd_toStartOf="@+id/unitInputSearchText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/unitInputSearchText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:hint="@string/unitInputSearch"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#2E7D32"
+        app:layout_constraintBottom_toTopOf="@+id/unitInputList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/typeInputSearchText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/typeInputList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="#888888"
+        app:layout_constraintBottom_toTopOf="@+id/inverseButton"
+        app:layout_constraintEnd_toStartOf="@+id/unitInputList"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeInputSearchText" />
+
+    <ListView
+        android:id="@+id/unitInputList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="5dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="#888888"
+        app:layout_constraintBottom_toTopOf="@+id/goButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/typeInputList"
+        app:layout_constraintTop_toBottomOf="@+id/unitInputSearchText" />
+
+    <Button
+        android:id="@+id/inverseButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#FF9800"
+        android:text="@string/sendInverse"
+        android:textColor="#424242"
+        app:iconTint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/unitOutputSearchText"
+        app:layout_constraintEnd_toStartOf="@+id/goButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeInputList" />
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#8BC34A"
+        android:text="@string/sendGo"
+        android:textColor="#37474F"
+        app:layout_constraintBottom_toTopOf="@+id/unitOutputSearchText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inverseButton"
+        app:layout_constraintTop_toBottomOf="@+id/unitInputList" />
+
+    <EditText
+        android:id="@+id/unitOutputSearchText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:hint="@string/unitOutputSearch"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#D81B60"
+        app:layout_constraintBottom_toTopOf="@+id/unitOutputList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inverseButton" />
+
+    <ListView
+        android:id="@+id/unitOutputList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="5dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="#888888"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unitOutputSearchText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

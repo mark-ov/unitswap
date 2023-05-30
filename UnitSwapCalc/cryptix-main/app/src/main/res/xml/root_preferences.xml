@@ -1,0 +1,44 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="General">
+
+        <ListPreference
+            app:key="themelist"
+            app:title="@string/pref_theme_title"
+            app:entries="@array/themes"
+            app:entryValues="@array/themeValues"
+            app:defaultValue="system"
+            app:useSimpleSummaryProvider="true" />
+
+        <SeekBarPreference
+            android:max="20"
+            app:defaultValue="10"
+            app:key="numofdecimal"
+            app:min="0"
+            app:showSeekBarValue="true"
+            app:title="@string/pref_decimals_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="About">
+        <Preference
+            app:title="Explore"
+            app:key="explore"
+            app:summary="explore biotstoiq" />
+
+        <Preference
+            app:title="Philosophy"
+            app:key="philosophy"
+            app:summary="see the philosophy of biotstoiq" />
+
+        <Preference
+            app:title="Source"
+            app:key="source"
+            app:summary="clone/fork/see the source of biotstoiq products" />
+
+        <Preference
+            app:title="Version"
+            app:key="version"
+            app:summary="1.38"/>
+    </PreferenceCategory>
+</PreferenceScreen>

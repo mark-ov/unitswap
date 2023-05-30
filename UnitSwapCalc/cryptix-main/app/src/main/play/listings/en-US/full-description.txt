@@ -1,0 +1,9 @@
+cryptix is a simple, functional, and efficient unit convertion software.
+
+features:
+  - 440+ units, 35+ quantites,
+  - csv input support,
+  - works offline,
+  - no permissions required,
+  - ultra-fast and efficient,
+  - dark theme.
